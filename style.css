@@ -1,11 +1,21 @@
 .menu {
     background: #333131;
 
-    a{
+    {
         color: #ffffff;
 
-        &:hover {
+        :hover {
             background: lighten(#333131,8%);
         }
     }
  }
+
+ .mobile-nav-bar {
+    background-color: #333131;
+  }
+  
+  .mobile-nav-bar a {
+    color: #fefefe;
+  }
+  
+ 
