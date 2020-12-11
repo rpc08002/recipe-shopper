@@ -1,17 +1,26 @@
 .menu {
     background: #333131;
     font-family: "Grand Hotel";
-
-    a{
-        color: #ffffff;
-
-        &:hover {
-            background: lighten(#333131,8%);
-        }
-    }
  }
 
- .callout {
-     border: 5px solid black;
-     border-radius: 5px;;
- }
+ .input-group-rounded .input-group-field {
+    border-radius: 5000px 0 0 5000px;
+    padding-left: 1rem;
+  }
+  
+  .input-group-rounded .input-group-button .button {
+    border-radius: 0 5000px 5000px 0;
+    font-size: 0.8rem;
+  }
+  
+  header {
+      padding: 50px;
+  }
+
+a{
+    color: #ffffff;
+}
+
+a:hover {
+    background: lighten(#333131,8%);
+}
