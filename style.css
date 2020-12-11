@@ -1,5 +1,6 @@
 .menu {
     background: #333131;
+    font-family: "Grand Hotel";
 
     a{
         color: #ffffff;
@@ -8,4 +9,9 @@
             background: lighten(#333131,8%);
         }
     }
+ }
+
+ .callout {
+     border: 5px solid black;
+     border-radius: 5px;;
  }
