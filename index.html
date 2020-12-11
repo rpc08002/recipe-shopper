@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Title -->
     <title>Endless Pastabilities - Recipe Shopper</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Foundation CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <!-- Custom CSS -->
@@ -33,7 +35,31 @@
     </aside>
 
     <!-- Header Search Bar -->
-    <header></header>
+    <header>
+
+        <!-- Search Bar -->
+        <div class="input-group input-group-rounded searchRecipe">
+            <input class="input-group-field" type="search">
+            <div class="input-group-button">
+              <input type="submit" class="button round" value="Search">
+            </div>
+        </div>
+            <!-- Allergens Filter -->
+            <div class="large-6 columns">
+                <label>Allergens: </label>
+                <input id="checkbox1" type="checkbox"><label for="checkbox1">Dairy</label>
+                <input id="checkbox2" type="checkbox"><label for="checkbox2">Egg</label>
+                <input id="checkbox2" type="checkbox"><label for="checkbox3">Gluten</label>
+                <input id="checkbox2" type="checkbox"><label for="checkbox4">Grain</label>
+                <input id="checkbox2" type="checkbox"><label for="checkbox5">Peanut</label>
+                <input id="checkbox2" type="checkbox"><label for="checkbox6">Shellfish</label>
+                <input id="checkbox2" type="checkbox"><label for="checkbox7">Sesame</label>
+                <input id="checkbox2" type="checkbox"><label for="checkbox8">Soy</label>
+                <input id="checkbox2" type="checkbox"><label for="checkbox9">Wheat</label>
+            </div>
+
+
+    </header>
 
     <!-- Search Results -->
     <section></section>
