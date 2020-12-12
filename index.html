@@ -46,15 +46,18 @@
   <!-- Header Search Bar -->
   <header class="columns small-9 medium-10 large-11">
     <!-- Search Bar -->
-    <div class="input-group">
-      <input class="input-group-field searchRecipe" type="search">
-      <div class="input-group-button">
-        <input type="submit" class="button" value="Search">
-        <button type="button" class="alert button">Clear</button>
-      </div>
-    </div>
+    <form>
+        <div class="input-group middle">
+            <input class="input-group-field searchRecipe" type="search">
+            <div class="input-group-button">
+              <input type="submit" class="button" value="Search">
+              <button type="button" class="alert button">Clear</button>
+            </div>
+          </div>
+    </form>
+  
     <!-- Allergens Filter -->
-    <fieldset class="large-6 columns">
+    <fieldset class="columns">
       <label>Allergens: </label>
       <input id="checkbox1" type="checkbox"><label for="checkbox1">Dairy</label>
       <input id="checkbox2" type="checkbox"><label for="checkbox2">Egg</label>
