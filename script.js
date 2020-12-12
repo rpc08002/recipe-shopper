@@ -13,6 +13,18 @@ function searchRecipe(searchInput) {
 
     }).then(function (response) {
         console.log(response); //to test API URL
+        
+        $(".searchResults").html(
+        `<div class="card">
+        <img src="${response.results[0].image}">
+        <div class="card-section">
+         <p>Prep Time: ${response.results[0].readyInMinutes}</p>
+        </div>
+        </div>`
+
+        );
+
+
     });
 }
 
