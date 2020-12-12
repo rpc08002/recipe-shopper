@@ -5,9 +5,12 @@ footer {
   height: 2.5rem;
 }
 
-.menu {
-    background: #333131;
+h1 {
     font-family: "Grand Hotel";
+ }
+
+ #pastaTitle {
+   color: gold;
  }
 
  .input-group-rounded .input-group-field {
@@ -43,4 +46,8 @@ a:hover {
     background-size: cover;
     background-position: center;
     background-image: url(Assets/pasta.jpeg);
+}
+
+.fa-shopping-basket {
+  filter: invert(1);
 }
