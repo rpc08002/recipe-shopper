@@ -1,52 +1,56 @@
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-}
+/* Elements */
 
-h1 {
-    font-family: "Grand Hotel";
- }
-
- #pastaTitle {
-   color: gold;
- }
-
- .input-group-rounded .input-group-field {
-    border-radius: 5000px 0 0 5000px;
-    padding-left: 1rem;
-  }
-  
-  .input-group-rounded .input-group-button .button {
-    border-radius: 0 5000px 5000px 0;
-    font-size: 0.8rem;
-  }
-  
-  header {
-      padding: 75px;
-      background-color: white;
-      margin: 100px;
-      border-radius: 30px;
-  }
-
-a{
-    color: #ffffff;
+a {
+  color: #ffffff;
 }
 
 a:hover {
-    background: lighten(#333131,8%);
+  background: lighten(#333131, 8%);
+}
 
+header {
+  padding: 75px;
+  background-color: white;
+  margin: 100px;
+  border-radius: 30px;
+}
+
+.fa-shopping-basket {
+  /* Remember to treat as a font */
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: "Grand Hotel";
+}
+
+#pastaTitle {
+  color: gold;
+}
+
+aside {
+  display: none;
 }
 
 .hero {
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(Assets/pasta.jpeg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(Assets/pasta.jpeg);
 }
 
+.input-group-rounded .input-group-field {
+  border-radius: 5000px 0 0 5000px;
+  padding-left: 1rem;
+}
+
+.input-group-rounded .input-group-button .button {
+  border-radius: 0 5000px 5000px 0;
+  font-size: 0.8rem;
+}
 
 .switch-toggle-wrapper {
   display: -webkit-flex;
@@ -54,35 +58,25 @@ a:hover {
   display: flex;
   margin-bottom: 1rem;
   -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .switch-toggle-wrapper .switch {
   margin-bottom: 0;
 }
 
-.fa-shopping-basket {
-  /* Remember to treat as a font */
-  font-size: 3rem;
-  color: white;
-}
-
-aside {
-  display: none;
-}
-
 .dietBox {
-    position: relative;
-    margin: 0 0 1rem 0;
-    padding: 1rem;
-    border: 1px solid rgba(10,10,10,.25);
-    border-radius: 0;
-    color: white;
-    display: none;
+  position: relative;
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  border: 1px solid rgba(10, 10, 10, .25);
+  border-radius: 0;
+  color: white;
+  display: none;
 }
 
 .hero2 {
