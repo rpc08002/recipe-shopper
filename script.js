@@ -19,38 +19,42 @@ function searchRecipe() {
 
         let id = response.results[0].id
 
-        queryURL =`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`;
+        queryURL = `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`;
 
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
             var shoppingResponse = response;
-            console.log("res2", shoppingResponse);
+            //console.log("res2", shoppingResponse); //to test for response
 
+            renderTopRecipes(recipeResponse, shoppingResponse);
 
         });
-
 
     });
 }
 
-        // $(".searchResults").html(
-        //     `<div class="column medium-3">
-        //      <div class="card">
-        //      <img src="https://spoonacular.com/recipeImages/${response.results[0].image}" width="100" >
-        //     <div class="card-devider">
-        //     <p>Prep Time: ${response.results[0].readyInMinutes}, Servings: ${response.results[0].servings}</p>
-        //     </div>
-        //     <div class="card-section">
-        //     <h6> ${response.results[0].title}</h6>
-        //     <p>Description: </p>
-        //     </div>
-        //     </div>
-        //     </div>`
+function renderTopRecipes(response1, response2) {
 
-        // );
 
+    $(".searchResults").html(
+        `<div class="column medium-3">
+             <div class="card">
+             <img src="https://spoonacular.com/recipeImages/${response1.results[0].image}" width="100" >
+            <div class="card-devider">
+            <p>Prep Time: ${response1.results[0].readyInMinutes}, Servings: ${response1.results[0].servings}</p>
+            </div>
+            <div class="card-section">
+            <h6> ${response1.results[0].title}</h6>
+            <p>Description: ${response2.summary}</p>
+            </div>
+            </div>
+            </div>`
+
+    );
+
+}
 
 // Hide shopping list using close button
 $(".close-button").on("click", function () {
@@ -73,8 +77,8 @@ $(".button").on("click", function (event) {
 });
 
 // Click Function for hiding/showing diet restrictions
-$(document).ready(function(){
-        $('#btnSlideTog').click(function() {
-            $('.dietBox').slideToggle(500); // Toggles the slide motion of the box
+$(document).ready(function () {
+    $('#btnSlideTog').click(function () {
+        $('.dietBox').slideToggle(500); // Toggles the slide motion of the box
     });
 })
