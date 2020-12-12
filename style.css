@@ -26,8 +26,7 @@ h1 {
   header {
       padding: 75px;
       background-color: white;
-      padding: 60px;
-      margin: 50px;
+      margin: 100px;
       border-radius: 30px;
   }
 
@@ -82,7 +81,19 @@ aside {
     padding: 1rem;
     border: 1px solid rgba(10,10,10,.25);
     border-radius: 0;
-    background-color: #fff;
-    color: #0a0a0a;
+    color: white;
     display: none;
+}
+
+.hero2 {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(Assets/cuttingboard.jpg);
+}
+
+.searchRecipe {
+  color: white;
+  font-weight: 700;
 }
