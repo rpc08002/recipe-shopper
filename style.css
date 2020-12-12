@@ -44,3 +44,22 @@ a:hover {
     background-position: center;
     background-image: url(Assets/pasta.jpeg);
 }
+
+
+.switch-toggle-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.switch-toggle-wrapper .switch {
+  margin-bottom: 0;
+}
+
