@@ -21,7 +21,11 @@ footer {
   }
   
   header {
-      padding: 50px;
+      padding: 75px;
+      background-color: white;
+      padding: 60px;
+      margin: 50px;
+      border-radius: 30px;
   }
 
 a{
@@ -30,4 +34,12 @@ a{
 
 a:hover {
     background: lighten(#333131,8%);
+}
+
+.hero {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(Assets/pasta.jpeg);
 }
