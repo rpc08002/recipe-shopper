@@ -48,8 +48,36 @@ a:hover {
     background-image: url(Assets/pasta.jpeg);
 }
 
+
+.switch-toggle-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.switch-toggle-wrapper .switch {
+  margin-bottom: 0;
+}
+
 .fa-shopping-basket {
   /* Remember to treat as a font */
   font-size: 3rem;
   color: white;
+}
+
+.dietBox {
+    position: relative;
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+    border: 1px solid rgba(10,10,10,.25);
+    border-radius: 0;
+    background-color: #fff;
+    color: #0a0a0a;
 }
