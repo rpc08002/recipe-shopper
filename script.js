@@ -12,15 +12,21 @@ function searchRecipe(searchInput) {
         method: "GET"
 
     }).then(function (response) {
-        console.log(response); //to test API URL
-        
+        console.log(response.results[0].image); //to test API URL
+
         $(".searchResults").html(
-        `<div class="card">
-        <img src="${response.results[0].image}">
-        <div class="card-section">
-         <p>Prep Time: ${response.results[0].readyInMinutes}</p>
-        </div>
-        </div>`
+            `<div class="column medium-3">
+             <div class="card">
+             <img src="https://spoonacular.com/recipeImages/${response.results[0].image}" width="100" >
+            <div class="card-devider">
+            <p>Prep Time: ${response.results[0].readyInMinutes}, Servings: ${response.results[0].servings}</p>
+            </div>
+            <div class="card-section">
+            <h6> ${response.results[0].title}</h6>
+            <p>Description: </p>
+            </div>
+            </div>
+            </div>`
 
         );
 
