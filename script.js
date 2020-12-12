@@ -54,8 +54,9 @@ $(".button").on("click", function (event) {
     searchRecipe(searchInput);
 });
 
-$('#switch-toggle-all [data-toggle-all]' ).click(function () {
-    $( '#switch-toggle-all input[type="checkbox"]').prop('checked', this.checked)
-  })
-  
-  
+// Click Function for hiding/showing diet restrictions
+$(document).ready(function(){
+        $('#btnSlideTog').click(function() {
+            $('.dietBox').slideToggle(500); // Toggles the slide motion of the box
+    });
+})

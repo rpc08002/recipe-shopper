@@ -5,9 +5,12 @@ footer {
   height: 2.5rem;
 }
 
-.menu {
-    background: #333131;
+h1 {
     font-family: "Grand Hotel";
+ }
+
+ #pastaTitle {
+   color: gold;
  }
 
  .input-group-rounded .input-group-field {
@@ -63,3 +66,18 @@ a:hover {
   margin-bottom: 0;
 }
 
+.fa-shopping-basket {
+  /* Remember to treat as a font */
+  font-size: 3rem;
+  color: white;
+}
+
+.dietBox {
+    position: relative;
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+    border: 1px solid rgba(10,10,10,.25);
+    border-radius: 0;
+    background-color: #fff;
+    color: #0a0a0a;
+}

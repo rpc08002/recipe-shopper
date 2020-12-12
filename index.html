@@ -25,11 +25,12 @@
       <div class="title-bar-left">
         <button class="menu-icon" type="button"></button>
       </div>
-      <ul class="menu dropdown" data-dropdown-menu>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shopping List</a></li>
-        <li><a href="#">About Us</a></li>
-      </ul>
+      <div class="title-bar">
+        <h1>Endless <span id="pastaTitle">Pasta</span>bilities</h1>
+      </div>
+      <div class="title-bar-right">
+        <button class="fas fa-shopping-basket" type="button"></button>
+      </div>
   </nav>
 
   <!-- Shopping List -->
@@ -57,19 +58,7 @@
     </form>
 
     <p>Dietary Restrictions:</p><button id="btnSlideTog">Slide Toggle</button>
-    <div class="callout" id="switch-toggle-all">
-      <div class="switch-toggle-wrapper">
-        <div class="switch">
-          <input class="switch-input" id="exampleSwitch1" type="checkbox" name="exampleSwitch" data-toggle-all>
-          <label class="switch-paddle" for="exampleSwitch1">
-            <span class="show-for-sr">Toggle All</span>
-          </label>
-        </div>
-        <span>Toggle All</span>
-      </div>
-    
-      <hr />
-    
+    <div class="dietBox">
       <div class="switch-toggle-wrapper">
         <div class="switch">
           <input class="switch-input" id="exampleSwitch2" type="checkbox" name="exampleSwitch2">
@@ -138,10 +127,7 @@
   <!-- Search Results -->
   <section class="columns small-9 medium-10 large-11 searchResults"></section>
 
-  <!-- Footer -->
-  <footer class="columns small-12 medium-12 large-12">
-    <p>&copy 2020 Nardin Lachowski, Alex Gold, Ryan Curtin, and Emily Spoldi</p>
-  </footer>
+ 
 
 
 
@@ -152,6 +138,8 @@
     integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
   <!-- jQuery Link -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Font Awesome Link -->
+  <script src="https://kit.fontawesome.com/49503165e5.js" crossorigin="anonymous"></script>
   <!-- Custom JavaScript Link -->
   <script src="./script.js"></script>
 </body>
