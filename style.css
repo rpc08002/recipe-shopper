@@ -49,5 +49,7 @@ a:hover {
 }
 
 .fa-shopping-basket {
-  filter: invert(1);
+  /* Remember to treat as a font */
+  font-size: 3rem;
+  color: white;
 }
