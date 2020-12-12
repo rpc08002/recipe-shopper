@@ -72,6 +72,10 @@ a:hover {
   color: white;
 }
 
+aside {
+  display: none;
+}
+
 .dietBox {
     position: relative;
     margin: 0 0 1rem 0;
@@ -80,4 +84,5 @@ a:hover {
     border-radius: 0;
     background-color: #fff;
     color: #0a0a0a;
+    display: none;
 }
