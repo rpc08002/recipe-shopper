@@ -4,7 +4,8 @@ var searchInput = "";
 //API related variables
 let apiKey = "2ba2c982b41349dab1c118f2767a1cd1";
 
-function searchRecipe(searchInput) {
+function searchRecipe() {
+
     let queryURL = `https://api.spoonacular.com/recipes/search?apiKey=${apiKey}&number=4&query=${searchInput}`;
 
     $.ajax({
@@ -12,27 +13,44 @@ function searchRecipe(searchInput) {
         method: "GET"
 
     }).then(function (response) {
-        console.log(response.results[0].image); //to test API URL
+        console.log(response.results[0].id); //to test API URL
 
-        $(".searchResults").html(
-            `<div class="column medium-3">
-             <div class="card">
-             <img src="https://spoonacular.com/recipeImages/${response.results[0].image}" width="100" >
-            <div class="card-devider">
-            <p>Prep Time: ${response.results[0].readyInMinutes}, Servings: ${response.results[0].servings}</p>
-            </div>
-            <div class="card-section">
-            <h6> ${response.results[0].title}</h6>
-            <p>Description: </p>
-            </div>
-            </div>
-            </div>`
+        var recipeResponse = response
 
-        );
+        let id = response.results[0].id
+
+        queryURL =`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`;
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            var shoppingResponse = response;
+            console.log("res2", shoppingResponse);
+
+
+        });
 
 
     });
 }
+
+        // $(".searchResults").html(
+        //     `<div class="column medium-3">
+        //      <div class="card">
+        //      <img src="https://spoonacular.com/recipeImages/${response.results[0].image}" width="100" >
+        //     <div class="card-devider">
+        //     <p>Prep Time: ${response.results[0].readyInMinutes}, Servings: ${response.results[0].servings}</p>
+        //     </div>
+        //     <div class="card-section">
+        //     <h6> ${response.results[0].title}</h6>
+        //     <p>Description: </p>
+        //     </div>
+        //     </div>
+        //     </div>`
+
+        // );
+
 
 // Hide shopping list using close button
 $(".close-button").on("click", function () {
