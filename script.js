@@ -56,7 +56,11 @@ function renderTopRecipes(response1, response2) {
 
 }
 
-// Hide shopping list using close button
+// Show and hide shopping list using close button
+$(".fa-shopping-basket").on("click", function() {
+    $("aside").show();
+});
+
 $(".close-button").on("click", function () {
     $("aside").hide();
 });
