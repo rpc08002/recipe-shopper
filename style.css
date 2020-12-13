@@ -8,30 +8,73 @@ a:hover {
   background: lighten(#333131, 8%);
 }
 
-header {
-  padding: 75px;
-  background-color: white;
-  margin: 100px;
+body {
+  padding: 2rem;
+}
+
+nav {
+  background-color: black;
+}
+
+fieldset {
+  height: 10rem;
+  padding-top: 3rem;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(Assets/cuttingboard.jpg);
+  margin-bottom: 2rem;
   border-radius: 30px;
 }
 
-.fa-shopping-basket {
+.fa-shopping-basket, .fa-bars, .fa-users {
   /* Remember to treat as a font */
-  font-size: 3rem;
-  color: white;
-  cursor: pointer;
+  color: white !important;
 }
 
-h1 {
+.branding {
   font-family: "Grand Hotel";
+  color: white;
+  font-size: 2rem;
+  text-align: center !important;
+  padding-top: 0.5rem !important;
 }
 
 #pastaTitle {
   color: gold;
 }
 
-aside {
+header {
+  border-radius: 30px;
+  margin-top: 5rem;
+}
+
+.listPopup, .aboutUs {
   display: none;
+  position: absolute !important;
+  top: 3.3rem;
+  right: 0;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0 3rem;
+  width: fit-content;
+}
+
+.closeList, .closeDev {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.tooltip-right {
+  background-color: transparent;
 }
 
 .hero {
@@ -40,33 +83,6 @@ aside {
   background-size: cover;
   background-position: center;
   background-image: url(Assets/pasta.jpeg);
-}
-
-.input-group-rounded .input-group-field {
-  border-radius: 5000px 0 0 5000px;
-  padding-left: 1rem;
-}
-
-.input-group-rounded .input-group-button .button {
-  border-radius: 0 5000px 5000px 0;
-  font-size: 0.8rem;
-}
-
-.switch-toggle-wrapper {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 1rem;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.switch-toggle-wrapper .switch {
-  margin-bottom: 0;
 }
 
 .dietBox {
@@ -79,15 +95,21 @@ aside {
   display: none;
 }
 
-.hero2 {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url(Assets/cuttingboard.jpg);
+.searchRecipe {
+  background-color: white;
+  font-weight: 700;
+  width: 50%;
+  margin: auto;
+  display: block;
 }
 
-.searchRecipe {
-  color: white;
-  font-weight: 700;
+.btnCenter {
+  display: flex;
+  width: 40%;
+  margin: auto;
+}
+
+#searchBtn {
+  margin: auto;
+  line-height: 1;
 }
