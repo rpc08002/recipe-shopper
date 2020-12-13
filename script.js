@@ -39,31 +39,32 @@ function renderTopRecipes(response1, response2) {
 
 
     $(".searchResults").html(
-        `<div class="column medium-3">
-             <div class="card">
+        `<div>
+        <article class="card">
              <img src="https://spoonacular.com/recipeImages/${response1.results[0].image}" width="100" >
-            <div class="card-devider">
+            <footer>
+            <hr>
             <p>Prep Time: ${response1.results[0].readyInMinutes}, Servings: ${response1.results[0].servings}</p>
-            </div>
-            <div class="card-section">
-            <h6> ${response1.results[0].title}</h6>
+            <h1> ${response1.results[0].title}</h1>
             <p>Description: ${response2.summary}</p>
-            </div>
-            </div>
+            </footer>
+            </article>
             </div>`
-
     );
-
 }
 
 // Show and hide shopping list using close button
 $(".fa-shopping-basket").on("click", function() {
-    $("aside").show();
-});
+    $(".listPopup").show();});
 
-$(".close-button").on("click", function () {
-    $("aside").hide();
-});
+$(".fa-users").on("click", function() {
+    $(".aboutUs").show();});
+
+$(".closeList").on("click", function () {
+    $(".listPopup").hide();});
+
+$(".closeDev").on("click", function () {
+    $(".aboutUs").hide();});
 
 
 //Click Handler When Search is Submitted
