@@ -4,7 +4,7 @@ var searchInput = "";
 //API related variables
 let apiKey = "2ba2c982b41349dab1c118f2767a1cd1";
 
-function searchRecipe() {
+function searchRecipe(searchInput) {
 
     let queryURL = `https://api.spoonacular.com/recipes/search?apiKey=${apiKey}&number=4&query=${searchInput}`;
 
