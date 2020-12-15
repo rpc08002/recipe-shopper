@@ -3,10 +3,12 @@ var searchInput = "";
 var currentIds = [];
 
 //API related variables
-let apiKey = "908fa13543d44e09a8394d63af4bb148";
+let apiKey = "fff75352e87a4053a01dfc5c9c2d9545";
 let recipeCount = 4;
 
 function searchRecipe(searchInput) {
+
+    $(".searchResults").empty();
 
     let queryURL = `https://api.spoonacular.com/recipes/search?apiKey=${apiKey}&number=${recipeCount}&query=${searchInput}`;
 
@@ -34,16 +36,15 @@ function searchRecipe(searchInput) {
 
 function renderTopRecipes() {
 
+    let cardDeck = "";
+
     currentIds.forEach(function (element) {
+        console.log(element);
         let queryURL = `https://api.spoonacular.com/recipes/${element}/information?apiKey=${apiKey}`;
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-
-            $(".searchResults").empty();
-
-            let cardDeck = "";
 
             //console.log ("foreach", response);
 
@@ -60,31 +61,37 @@ function renderTopRecipes() {
                             </article>
                             </div>`;
 
-        });
+            $(".searchResults").append(cardDeck);
 
-        $(".searchResults").append(cardDeck);
+        });
 
     });
 }
 
 // Show and hide shopping list using close button
-$(".fa-shopping-basket").on("click", function() {
-    $(".listPopup").show();});
+$(".fa-shopping-basket").on("click", function () {
+    $(".listPopup").show();
+});
 
-$(".fa-users").on("click", function() {
-    $(".aboutUs").show();});
+$(".fa-users").on("click", function () {
+    $(".aboutUs").show();
+});
 
 $(".closeList").on("click", function () {
-    $(".listPopup").hide();});
+    $(".listPopup").hide();
+});
 
 $(".closeDev").on("click", function () {
-    $(".aboutUs").hide();});
+    $(".aboutUs").hide();
+});
 
-$(".burger").on("click", function() {
-    $(".menu").attr(transform, scaleX(0));});
+$(".burger").on("click", function () {
+    $(".menu").attr(transform, scaleX(0));
+});
 
-$(".fa-sliders-h").on("click", function() {
-    $("fieldset").attr(display, contents);});
+$(".fa-sliders-h").on("click", function () {
+    $("fieldset").attr(display, contents);
+});
 
 
 //Click Handler When Search is Submitted
@@ -92,7 +99,7 @@ $(".button").on("click", function (event) {
     event.preventDefault();
 
     var searchInput = $(".searchRecipe").val();
-    console.log(searchInput)
+    //console.log(searchInput)
     //if input is blank, return from funciton
     if (searchInput === "") {
         return;
