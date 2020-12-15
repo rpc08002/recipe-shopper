@@ -89,10 +89,10 @@ $(".burger").on("click", function () {
     $(".menu").attr(transform, scaleX(0));
 });
 
-$(".fa-sliders-h").on("click", function () {
-    $("fieldset").attr(display, contents);
-});
-
+// Click Function for hiding/showing diet restrictions
+    $('.fa-sliders-h').click(function () {
+        $('.filters').slideToggle(700); // Toggles the slide motion of the box
+    });
 
 //Click Handler When Search is Submitted
 $(".button").on("click", function (event) {
@@ -108,9 +108,3 @@ $(".button").on("click", function (event) {
     searchRecipe(searchInput);
 });
 
-// Click Function for hiding/showing diet restrictions
-$(document).ready(function () {
-    $('#btnSlideTog').click(function () {
-        $('.allergens').slideToggle(500); // Toggles the slide motion of the box
-    });
-})
