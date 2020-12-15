@@ -16,16 +16,16 @@ nav {
   background-color: black;
 }
 
-fieldset {
-  height: 15rem;
-  padding-top: 3rem;
+.searchBar {
+  margin-top: 3rem;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-image: url(Assets/cuttingboard.jpg);
-  margin-bottom: 2rem;
-  border-radius: 30px;
+  margin-bottom: 0.5rem;
+  border-radius: 20px;
+  text-align: center;
 }
 
 .fa-shopping-basket, .fa-bars, .fa-users {
@@ -33,7 +33,7 @@ fieldset {
   color: white !important;
 }
 
-.branding {
+.branding, legend {
   font-family: "Grand Hotel";
   color: white;
   font-size: 2rem;
@@ -41,13 +41,12 @@ fieldset {
   padding-top: 0.5rem !important;
 }
 
-#pastaTitle {
-  color: gold;
+legend {
+  color: black;
 }
 
-header {
-  border-radius: 30px;
-  margin-top: 5rem;
+#pastaTitle {
+  color: gold;
 }
 
 .listPopup, .aboutUs {
@@ -85,38 +84,27 @@ header {
   background-image: url(Assets/pasta.jpeg);
 }
 
-.dietBox {
-  position: relative;
-  margin: 0 0 1rem 0;
-  padding: 1rem;
-  border: 1px solid rgba(10, 10, 10, .25);
-  border-radius: 0;
-  color: white;
-  display: none;
-}
-
 .searchRecipe {
   background-color: white;
-  font-weight: 700;
   width: 50%;
-  margin: auto;
-  display: block;
-}
-
-.btnCenter {
-  display: flex;
-  width: 40%;
-  margin: auto;
+  margin-top: 1rem;
 }
 
 #searchBtn {
-  margin: 1rem auto;
   line-height: 1;
 }
 
+fieldset {
+  border: 5px solid black;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1rem;
+}
+
 .allergens {
-  display: flex;
-  width: 40%;
-  margin: auto; 
-  color: black;
+  margin-left: 5rem;
+}
+
+.diets {
+  margin-right: 5rem;
 }
