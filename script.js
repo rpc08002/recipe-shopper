@@ -67,8 +67,10 @@ $(".closeDev").on("click", function () {
     $(".aboutUs").hide();});
 
 $(".burger").on("click", function() {
-    $(".menu").attr(transform, scaleX(0));
-})
+    $(".menu").attr(transform, scaleX(0));});
+
+$(".fa-sliders-h").on("click", function() {
+    $("fieldset").attr(display, contents);});
 
 
 //Click Handler When Search is Submitted

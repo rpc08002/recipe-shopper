@@ -61,141 +61,54 @@
     </button>
   </aside>
 
-  <!-- Header Search Bar -->
-  <header>
-    <!-- Search Bar -->
-    <fieldset>
-      <label><input class="searchRecipe" type="search"></label>
+  <!-- Search Bar -->
+  <section class="searchBar">
+      <label><input class="searchRecipe" type="search"></label><br>
       <label class="btnCenter">
         <button class="button fas fa-search" id="searchBtn"></button>
         <button class="button" id="searchBtn">Clear</button>
-        <span class="toggle button fas fa-sliders-h" id="searchBtn"></span>
+        <button class="button fas fa-sliders-h" id="searchBtn"></button>
       </label>
-      <div class="allergens">
-        <label>Allergen Restrictions: 
-          <input type="checkbox">
-          <span class="checkable">Dairy</span>
-        </label>
-        <label>
-          <input type="checkbox">
-          <span class="checkable">Egg</span>
-        </label>
-        <label>
-          <input type="checkbox">
-          <span class="checkable">Grain</span>
-        </label>
-        <label>
-          <input type="checkbox">
-          <span class="checkable">Peanut</span>
-        </label>
-        <label>
-          <input type="checkbox">
-          <span class="checkable">Gluten</span>
-        </label>
-        <label>
-          <input type="checkbox">
-          <span class="checkable">Shellfish</span>
-        </label>
-      </div>
-      <div class="allergens">
-        <label> Dietary Restrictions: 
-          <input type="checkbox">
-          <span class="checkable">Vegan</span>
-        </label>
-        <label>
-          <input type="checkbox">
-          <span class="checkable">Vegetarian</span>
-        </label>
-        <label>
-          <input type="checkbox">
-          <span class="checkable">Paleo</span>
-        </label>
-        <label>
-          <input type="checkbox">
-          <span class="checkable">Ketogenic</span>
-        </label>
-      </div>
-      
-    </fieldset>
+    <form class="filters flex">
+      <fieldset class="allergens">
+        <legend>Allergen Restrictions:</legend>
+          
+        <label><input type="checkbox">
+        <span class="checkable">Dairy</span></label>
+        <br>
+        <label><input type="checkbox">
+        <span class="checkable">Egg</span></label>
+        <br>
+        <label><input type="checkbox">
+        <span class="checkable">Grain</span></label>
+        <br>
+        <label><input type="checkbox">
+        <span class="checkable">Peanut</span></label>
+        <br>
+        <label><input type="checkbox">
+        <span class="checkable">Gluten</span></label>
+        <br>
+        <label><input type="checkbox">
+        <span class="checkable">Shellfish</span></label>
+      </fieldset>
 
-    
-
-    <!-- <form>
-      <div class="input-group middle">
-        <input class="input-group-field searchRecipe hero2" type="search">
-        <div class="input-group-button">
-          <button type="button" class="button fas fa-search"></button>
-          <button type="button" class="alert button">Clear</button>
-          <button id="btnSlideTog" class="fas fa-sliders-h button"></button>
-        </div>
-      </div>
+      <fieldset class="diets">
+        <legend>Dietary Restrictions:</legend>
+        
+        <label><input type="checkbox">
+        <span class="checkable">Vegan</span></label>
+        <br>
+        <label><input type="checkbox">
+        <span class="checkable">Vegetarian</span></label>
+        <br>
+        <label><input type="checkbox">
+        <span class="checkable">Paleo</span></label>
+        <br>
+        <label><input type="checkbox">
+        <span class="checkable">Ketogenic</span></label>
+      </fieldset>
     </form>
-
-    <div class="dietBox hero2">
-      <div class="switch-toggle-wrapper">
-        <div class="switch">
-          <input class="switch-input" id="exampleSwitch2" type="checkbox" name="exampleSwitch2">
-          <label class="switch-paddle" for="exampleSwitch2">
-            <span class="show-for-sr">Ketogenic</span>
-          </label>
-        </div>
-        <span>Ketogenic</span>
-      </div>
-
-      <div class="switch-toggle-wrapper">
-        <div class="switch">
-          <input class="switch-input" id="exampleSwitch3" type="checkbox" name="exampleSwitch3">
-          <label class="switch-paddle" for="exampleSwitch3">
-            <span class="show-for-sr">Paleo</span>
-          </label>
-        </div>
-        <span>Paleo</span>
-      </div>
-
-      <div class="switch-toggle-wrapper">
-        <div class="switch">
-          <input class="switch-input" id="exampleSwitch4" type="checkbox" name="exampleSwitch4">
-          <label class="switch-paddle" for="exampleSwitch4">
-            <span class="show-for-sr">Vegetarian</span>
-          </label>
-        </div>
-        <span>Vegetarian</span>
-      </div>
-
-      <div class="switch-toggle-wrapper">
-        <div class="switch">
-          <input class="switch-input" id="exampleSwitch5" type="checkbox" name="exampleSwitch5">
-          <label class="switch-paddle" for="exampleSwitch5">
-            <span class="show-for-sr">Vegan</span>
-          </label>
-        </div>
-        <span>Vegan</span>
-      </div>
-
-    </div> -->
-
-    <!-- Allergens Filter
-    <fieldset class="columns">
-      <label>Allergen Restrictions: </label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Dairy</label>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">Egg</label>
-      <input id="checkbox3" type="checkbox"><label for="checkbox4">Grain</label>
-      <input id="checkbox4" type="checkbox"><label for="checkbox5">Peanut</label>
-      <input id="checkbox5" type="checkbox"><label for="checkbox5">Gluten</label>
-      <input id="checkbox6" type="checkbox"><label for="checkbox6">Shellfish</label>
-      <input id="checkbox7" type="checkbox"><label for="checkbox7">Sesame</label>
-      <input id="checkbox8" type="checkbox"><label for="checkbox8">Soy</label>
-      <input id="checkbox9" type="checkbox"><label for="checkbox9">Wheat</label>
-    </fieldset>
-
-    <fieldset class="columns">
-      <label>Dietary Restrictions: </label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Vegan</label>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">Vegetarian</label>
-      <input id="checkbox3" type="checkbox"><label for="checkbox3">Paleo</label>
-      <input id="checkbox4" type="checkbox"><label for="checkbox4">Ketogenic</label>
-    </fieldset> -->
-  </header>
+  </section>
 
   <!-- Search Results -->
   <section class="searchResults flex four"></section>
