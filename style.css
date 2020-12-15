@@ -17,7 +17,7 @@ nav {
 }
 
 fieldset {
-  height: 10rem;
+  height: 15rem;
   padding-top: 3rem;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -112,4 +112,11 @@ header {
 #searchBtn {
   margin: 1rem auto;
   line-height: 1;
+}
+
+.allergens {
+  display: flex;
+  width: 40%;
+  margin: auto; 
+  color: black;
 }

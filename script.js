@@ -84,6 +84,6 @@ $(".button").on("click", function (event) {
 // Click Function for hiding/showing diet restrictions
 $(document).ready(function () {
     $('#btnSlideTog').click(function () {
-        $('.dietBox').slideToggle(500); // Toggles the slide motion of the box
+        $('.allergens').slideToggle(500); // Toggles the slide motion of the box
     });
 })
