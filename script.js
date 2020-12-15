@@ -66,6 +66,10 @@ $(".closeList").on("click", function () {
 $(".closeDev").on("click", function () {
     $(".aboutUs").hide();});
 
+$(".burger").on("click", function() {
+    $(".menu").attr(transform, scaleX(0));
+})
+
 
 //Click Handler When Search is Submitted
 $(".button").on("click", function (event) {
