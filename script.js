@@ -1,56 +1,70 @@
 //Search input
 var searchInput = "";
+var currentIds = [];
 
 //API related variables
-let apiKey = "2ba2c982b41349dab1c118f2767a1cd1";
+let apiKey = "908fa13543d44e09a8394d63af4bb148";
+let recipeCount = 4;
 
 function searchRecipe(searchInput) {
 
-    let queryURL = `https://api.spoonacular.com/recipes/search?apiKey=${apiKey}&number=4&query=${searchInput}`;
+    let queryURL = `https://api.spoonacular.com/recipes/search?apiKey=${apiKey}&number=${recipeCount}&query=${searchInput}`;
 
     $.ajax({
         url: queryURL,
         method: "GET"
 
     }).then(function (response) {
-        console.log(response.results[0].id); //to test API URL
 
-        var recipeResponse = response
+        for (var i = 0; i < recipeCount; i++) {
 
-        let id = response.results[0].id
+            //console.log(response.results[i].id); //to test API URL
 
-        queryURL = `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`;
+            currentIds.push(response.results[i].id);
 
+            //let id = response.results[i].id;
+
+
+            renderTopRecipes();
+            //console.log("Ids", currentIds);
+
+        }
+    });
+}
+
+function renderTopRecipes() {
+
+    currentIds.forEach(function (element) {
+        let queryURL = `https://api.spoonacular.com/recipes/${element}/information?apiKey=${apiKey}`;
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            var shoppingResponse = response;
-            //console.log("res2", shoppingResponse); //to test for response
 
-            renderTopRecipes(recipeResponse, shoppingResponse);
+            $(".searchResults").empty();
+
+            let cardDeck = "";
+
+            //console.log ("foreach", response);
+
+            cardDeck +=
+                `<div>
+                        <article class="card">
+                             <img src="${response.image}" style="width: 100%;" >
+                            <footer>
+                            <hr>
+                            <p>Prep Time: ${response.readyInMinutes}, Servings: ${response.servings}</p>
+                            <h1> ${response.title}</h1>
+                            <p style="height: 20ch;">Description: ${response.summary}...</p>
+                            </footer>
+                            </article>
+                            </div>`;
 
         });
 
+        $(".searchResults").append(cardDeck);
+
     });
-}
-
-function renderTopRecipes(response1, response2) {
-
-
-    $(".searchResults").html(
-        `<div>
-        <article class="card">
-             <img src="https://spoonacular.com/recipeImages/${response1.results[0].image}" width="100" >
-            <footer>
-            <hr>
-            <p>Prep Time: ${response1.results[0].readyInMinutes}, Servings: ${response1.results[0].servings}</p>
-            <h1> ${response1.results[0].title}</h1>
-            <p>Description: ${response2.summary}</p>
-            </footer>
-            </article>
-            </div>`
-    );
 }
 
 // Show and hide shopping list using close button
