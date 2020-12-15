@@ -31,6 +31,7 @@ nav {
 .fa-shopping-basket, .fa-bars, .fa-users {
   /* Remember to treat as a font */
   color: white !important;
+  background-color: black;
 }
 
 .branding, legend {
