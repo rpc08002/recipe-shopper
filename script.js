@@ -3,11 +3,11 @@ var searchInput = "";
 var currentIds = [];
 
 //API related variables
-let apiKey = "fff75352e87a4053a01dfc5c9c2d9545";
+let apiKey = "a0c3838a0e884d8e80dd30fc659b9d85";
 let recipeCount = 4;
 
 function searchRecipe(searchInput) {
-
+    currentIds = [];
     $(".searchResults").empty();
 
     let queryURL = `https://api.spoonacular.com/recipes/search?apiKey=${apiKey}&number=${recipeCount}&query=${searchInput}`;
@@ -18,27 +18,26 @@ function searchRecipe(searchInput) {
 
     }).then(function (response) {
 
-        for (var i = 0; i < recipeCount; i++) {
+        for (var i = 0; i < response.results.length; i++) {
 
-            //console.log(response.results[i].id); //to test API URL
+            //console.log("IDresponse", response.results[i].id); //to test API URL
 
             currentIds.push(response.results[i].id);
 
-            //let id = response.results[i].id;
-
-
-            renderTopRecipes();
-            //console.log("Ids", currentIds);
+            //let id = response.results[i].id;          
 
         }
+        renderTopRecipes();
     });
 }
 
 function renderTopRecipes() {
 
+    //console.log("Ids", currentIds);
+
     let cardDeck = "";
 
-    currentIds.forEach(function (element) {
+    currentIds.forEach(function (element, i, arr) {
         console.log(element);
         let queryURL = `https://api.spoonacular.com/recipes/${element}/information?apiKey=${apiKey}`;
         $.ajax({
@@ -46,9 +45,10 @@ function renderTopRecipes() {
             method: "GET"
         }).then(function (response) {
 
-            //console.log ("foreach", response);
+            //console.log("foreach", response);
 
-            cardDeck +=
+            $(".searchResults").append(
+
                 `<div>
                         <article class="card">
                              <img src="${response.image}" style="width: 100%;" >
@@ -59,13 +59,13 @@ function renderTopRecipes() {
                             <p style="height: 20ch;">Description: ${response.summary}...</p>
                             </footer>
                             </article>
-                            </div>`;
-
-            $(".searchResults").append(cardDeck);
+                            </div>`
+            );
 
         });
 
     });
+
 }
 
 // Show and hide shopping list using close button
