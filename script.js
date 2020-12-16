@@ -1,3 +1,5 @@
+document.getElementById("displayJsDate").textContent = moment().format('dddd, MMMM Do YYYY');
+
 //Search input
 var searchInput = "";
 var currentIds = [];
@@ -131,4 +133,3 @@ $(".button").on("click", function (event) {
 
     searchRecipe(searchInput);
 });
-
