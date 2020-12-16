@@ -103,9 +103,15 @@ fieldset {
 }
 
 .allergens {
-  margin-left: 5rem;
+  margin: 0rem 5rem;
+  margin-bottom: 1rem;
 }
 
 .diets {
-  margin-right: 5rem;
+  margin: 0rem 5rem;
+  margin-bottom: 1rem;
+}
+
+.cardCSS {
+  margin: 2rem;
 }

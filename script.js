@@ -50,13 +50,13 @@ function renderTopRecipes() {
             $(".searchResults").append(
 
                 `<div>
-                        <article class="card">
+                        <article class="card cardCSS">
                              <img src="${response.image}" style="width: 100%;" >
                             <footer>
                             <hr>
-                            <p>Prep Time: ${response.readyInMinutes}, Servings: ${response.servings}</p>
-                            <h1> ${response.title}</h1>
-                            <p style="height: 20ch;">Description: ${response.summary}...</p>
+                            <p style="font-size: 12px; font-weight:bold;">Prep Time: ${response.readyInMinutes}, Servings: ${response.servings}</p>
+                            <h4> ${response.title}</h4>
+                            <p style="height: 10ch;">Description: ${response.summary}...</p>
                             </footer>
                             </article>
                             </div>`
