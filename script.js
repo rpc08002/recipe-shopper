@@ -56,18 +56,36 @@ function renderTopRecipes() {
                             <hr>
                             <p style="font-size: 12px; font-weight:bold;">Prep Time: ${response.readyInMinutes}, Servings: ${response.servings}</p>
                             <h4> ${response.title}</h4>
-                            <button onclick="addToCart('${response.extendedIngredients[0].name}')" class="button fas fa-cookie-bite" id="shopList" title="Add Ingredients to Shopping List"></button>
+                            <button class="button fas fa-cookie-bite" value="${response.id}" title="Add Ingredients to Shopping List"></button>
                             <p style="height: 10ch;">Description: ${response.summary}...</p>
                             </footer>
                             </article>
                             </div>`
             );
-
+            
         });
 
     });
 
 }
+
+var ingredientID = "";
+var ingredientList = [];
+
+$(".fa-cookie-bite").on("click", function (event) {
+
+    ingredientID = event.target.value;
+    //ingredientList = event.target;
+    console.log(ingredientID);
+
+    foodItem = `https://api.spoonacular.com/recipes/${ingredientID}/ingredientWidget.json`;
+
+//     for (var i = 0; i < ingredientID.length; i++) {
+//         console.log(ingredientID)
+//     }
+
+})
+
 
 // Show and hide shopping list using close button
 $(".fa-shopping-basket").on("click", function () {
@@ -95,12 +113,6 @@ $('.fa-sliders-h').click(function () {
     $('.filters').slideToggle(700); // Toggles the slide motion of the box
 });
 
-$('#shopList').click(function () {
-    // `${response.extendedIngredients.name}`.append(".shoppingList")})
-    console.log("hello")})
-function addToCart (ingredient) {
-    console.log(ingredient);
-}
 // Click Function for Generating Random Photos of Food
 $('.fa-dice').click(function () {
     $('.randomResults').slideToggle(700); // Toggles the slide motion of the box
