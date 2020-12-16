@@ -3,7 +3,7 @@ var searchInput = "";
 var currentIds = [];
 
 //API related variables
-let apiKey = "fff75352e87a4053a01dfc5c9c2d9545";
+let apiKey = "a0c3838a0e884d8e80dd30fc659b9d85";
 let recipeCount = 4;
 
 function searchRecipe(searchInput) {
@@ -90,9 +90,14 @@ $(".burger").on("click", function () {
 });
 
 // Click Function for hiding/showing diet restrictions
-    $('.fa-sliders-h').click(function () {
-        $('.filters').slideToggle(700); // Toggles the slide motion of the box
-    });
+$('.fa-sliders-h').click(function () {
+    $('.filters').slideToggle(700); // Toggles the slide motion of the box
+});
+
+// Click Function for Generating Random Photos of Food
+$('.fa-dice').click(function () {
+    $('.randomResults').slideToggle(700); // Toggles the slide motion of the box
+});
 
 //Click Handler When Search is Submitted
 $(".button").on("click", function (event) {
