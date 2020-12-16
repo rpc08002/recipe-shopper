@@ -3,7 +3,7 @@ var searchInput = "";
 var currentIds = [];
 
 //API related variables
-let apiKey = "a0c3838a0e884d8e80dd30fc659b9d85";
+let apiKey = "136d0432ae8248a6b2265361748198f2";
 let recipeCount = 4;
 
 function searchRecipe(searchInput) {
@@ -55,7 +55,7 @@ function renderTopRecipes() {
                             <footer>
                             <hr>
                             <p style="font-size: 12px; font-weight:bold;">Prep Time: ${response.readyInMinutes}, Servings: ${response.servings}</p>
-                            <h4> ${response.title}</h4>
+                            <h4> ${response.title}</h4><button class="button fas fa-cookie-bite" id="shopList" title="Add Ingredients to Shopping List"></button>
                             <p style="height: 10ch;">Description: ${response.summary}...</p>
                             </footer>
                             </article>
@@ -98,6 +98,10 @@ $('.fa-sliders-h').click(function () {
 $('.fa-dice').click(function () {
     $('.randomResults').slideToggle(700); // Toggles the slide motion of the box
 });
+
+$('.fa-cookie-bite').click(function () {
+    `${response.extendedIngredients.name}`.append(".shoppingList")})
+
 
 //Click Handler When Search is Submitted
 $(".button").on("click", function (event) {
