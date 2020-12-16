@@ -3,7 +3,7 @@ var searchInput = "";
 var currentIds = [];
 
 //API related variables
-let apiKey = "a0c3838a0e884d8e80dd30fc659b9d85";
+let apiKey = "d4d6fdecf9fb41b2b2490abd140e7cfd";
 let recipeCount = 4;
 
 function searchRecipe(searchInput) {
@@ -56,17 +56,36 @@ function renderTopRecipes() {
                             <hr>
                             <p style="font-size: 12px; font-weight:bold;">Prep Time: ${response.readyInMinutes}, Servings: ${response.servings}</p>
                             <h4> ${response.title}</h4>
+                            <button class="button fas fa-cookie-bite" value="${response.id}" title="Add Ingredients to Shopping List"></button>
                             <p style="height: 10ch;">Description: ${response.summary}...</p>
                             </footer>
                             </article>
                             </div>`
             );
-
+            
         });
 
     });
 
 }
+
+var ingredientID = "";
+var ingredientList = [];
+
+$(".fa-cookie-bite").on("click", function (event) {
+
+    ingredientID = event.target.value;
+    //ingredientList = event.target;
+    console.log(ingredientID);
+
+    foodItem = `https://api.spoonacular.com/recipes/${ingredientID}/ingredientWidget.json`;
+
+//     for (var i = 0; i < ingredientID.length; i++) {
+//         console.log(ingredientID)
+//     }
+
+})
+
 
 // Show and hide shopping list using close button
 $(".fa-shopping-basket").on("click", function () {
