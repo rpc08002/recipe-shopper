@@ -3,7 +3,7 @@ var searchInput = "";
 var currentIds = [];
 
 //API related variables
-let apiKey = "136d0432ae8248a6b2265361748198f2";
+let apiKey = "d4d6fdecf9fb41b2b2490abd140e7cfd";
 let recipeCount = 4;
 
 function searchRecipe(searchInput) {
@@ -55,7 +55,8 @@ function renderTopRecipes() {
                             <footer>
                             <hr>
                             <p style="font-size: 12px; font-weight:bold;">Prep Time: ${response.readyInMinutes}, Servings: ${response.servings}</p>
-                            <h4> ${response.title}</h4><button class="button fas fa-cookie-bite" id="shopList" title="Add Ingredients to Shopping List"></button>
+                            <h4> ${response.title}</h4>
+                            <button onclick="addToCart('${response.extendedIngredients[0].name}')" class="button fas fa-cookie-bite" id="shopList" title="Add Ingredients to Shopping List"></button>
                             <p style="height: 10ch;">Description: ${response.summary}...</p>
                             </footer>
                             </article>
@@ -97,7 +98,9 @@ $('.fa-sliders-h').click(function () {
 $('#shopList').click(function () {
     // `${response.extendedIngredients.name}`.append(".shoppingList")})
     console.log("hello")})
-
+function addToCart (ingredient) {
+    console.log(ingredient);
+}
 // Click Function for Generating Random Photos of Food
 $('.fa-dice').click(function () {
     $('.randomResults').slideToggle(700); // Toggles the slide motion of the box
