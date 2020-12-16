@@ -94,14 +94,14 @@ $('.fa-sliders-h').click(function () {
     $('.filters').slideToggle(700); // Toggles the slide motion of the box
 });
 
+$('#shopList').click(function () {
+    // `${response.extendedIngredients.name}`.append(".shoppingList")})
+    console.log("hello")})
+
 // Click Function for Generating Random Photos of Food
 $('.fa-dice').click(function () {
     $('.randomResults').slideToggle(700); // Toggles the slide motion of the box
 });
-
-$('.fa-cookie-bite').click(function () {
-    `${response.extendedIngredients.name}`.append(".shoppingList")})
-
 
 //Click Handler When Search is Submitted
 $(".button").on("click", function (event) {
