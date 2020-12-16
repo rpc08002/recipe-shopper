@@ -90,9 +90,14 @@ $(".burger").on("click", function () {
 });
 
 // Click Function for hiding/showing diet restrictions
-    $('.fa-sliders-h').click(function () {
-        $('.filters').slideToggle(700); // Toggles the slide motion of the box
-    });
+$('.fa-sliders-h').click(function () {
+    $('.filters').slideToggle(700); // Toggles the slide motion of the box
+});
+
+// Click Function for Generating Random Photos of Food
+$('.fa-dice').click(function () {
+    $('.randomResults').slideToggle(700); // Toggles the slide motion of the box
+});
 
 //Click Handler When Search is Submitted
 $(".button").on("click", function (event) {
