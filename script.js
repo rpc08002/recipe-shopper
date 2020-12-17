@@ -93,6 +93,8 @@ function renderTopRecipes() {
                             </article>
                             </div>`
             );
+
+            getIngredients(response);
             
         });
 
@@ -103,19 +105,22 @@ function renderTopRecipes() {
 var ingredientID = "";
 var ingredientList = [];
 
+var getIngredients = function(recipe) {
+
 $(".fa-cookie-bite").on("click", function (event) {
+console.log(recipe);
+//      = event.target.value;
+//     //ingredientList = event.target;
+//     console.log(ingredientID);
 
-    ingredientID = event.target.value;
-    //ingredientList = event.target;
-    console.log(ingredientID);
+//     foodItem = `https://api.spoonacular.com/recipes/${ingredientID}/ingredientWidget.json`;
 
-    foodItem = `https://api.spoonacular.com/recipes/${ingredientID}/ingredientWidget.json`;
-
-//     for (var i = 0; i < ingredientID.length; i++) {
-//         console.log(ingredientID)
-//     }
+// //     for (var i = 0; i < ingredientID.length; i++) {ingredientID
+// //         console.log(ingredientID)
+// //     }
 
 })
+}
 
 
 // Show and hide shopping list using close button
