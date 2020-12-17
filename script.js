@@ -82,13 +82,13 @@ function renderTopRecipes() {
 
                 `<div>
                         <article class="card cardCSS">
-                             <img src="${response.image}" style="width: 100%;" >
+                             <a href="${response.sourceUrl}" title="full recipe"><img src="${response.image}" style="width: 100%;" ></a>
                             <footer>
                             <hr>
                             <p style="font-size: 12px; font-weight:bold;">Prep Time: ${response.readyInMinutes}, Servings: ${response.servings}</p>
                             <h4> ${response.title}</h4>
                             <button class="button fas fa-cookie-bite" value="${response.id}" title="Add Ingredients to Shopping List"></button>
-                            <p style="height: 10ch;">Description: ${response.summary}...</p>
+                            <p style="height: 10ch;">Description: ${response.summary}</p>
                             </footer>
                             </article>
                             </div>`
@@ -108,7 +108,7 @@ var ingredientList = [];
 var getIngredients = function(recipe) {
 
 $(".fa-cookie-bite").on("click", function (event) {
-console.log(recipe);
+console.log("ingredients",recipe);
 //      = event.target.value;
 //     //ingredientList = event.target;
 //     console.log(ingredientID);
