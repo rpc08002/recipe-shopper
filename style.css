@@ -68,6 +68,11 @@ legend {
   padding: 0.5rem;
 }
 
+.triviaBanner {
+  position:absolute;
+  top: 3.3rem;
+}
+
 .profile {
   border-radius: 50%;
   width: 100px;
