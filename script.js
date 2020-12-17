@@ -34,7 +34,7 @@ var searchInput = "";
 var currentIds = [];
 
 //API related variables
-let apiKey = "d4d6fdecf9fb41b2b2490abd140e7cfd";
+let apiKey = "fff75352e87a4053a01dfc5c9c2d9545";
 let recipeCount = 4;
 
 function searchRecipe(searchInput) {
@@ -48,6 +48,8 @@ function searchRecipe(searchInput) {
         method: "GET"
 
     }).then(function (response) {
+
+        var local = localStorage.setItem(recipeCount, searchInput)
 
         for (var i = 0; i < response.results.length; i++) {
 
@@ -152,13 +154,8 @@ $('.fa-sliders-h').click(function () {
     $('.filters').slideToggle(700); // Toggles the slide motion of the box
 });
 
-// Click Function for Generating Random Photos of Food
-$('.fa-dice').click(function () {
-    $('.randomResults').slideToggle(700); // Toggles the slide motion of the box
-});
-
 //Click Handler When Search is Submitted
-$(".button").on("click", function (event) {
+$(".fa-search").on("click", function (event) {
     event.preventDefault();
 
     var searchInput = $(".searchRecipe").val();
