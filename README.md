@@ -20,7 +20,7 @@ Our project is intended to be used by the average shopper. We give the user the 
 
 [Live URL](https://espoldi.github.io/recipe-shopper/)
 
-![Website Screenshot](/screenshot.png)
+![Website Screenshot](Assets/demo.png)
 
 ## License
 
