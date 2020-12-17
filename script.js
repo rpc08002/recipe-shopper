@@ -34,7 +34,7 @@ var searchInput = "";
 var currentIds = [];
 
 //API related variables
-let apiKey = "fff75352e87a4053a01dfc5c9c2d9545";
+let apiKey = "4d1ce173812b471d8f12dbeeb9ec8f7c";
 let recipeCount = 4;
 
 function searchRecipe(searchInput) {
