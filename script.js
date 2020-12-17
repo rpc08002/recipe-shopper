@@ -19,9 +19,13 @@ function setBanner() {
             setBanner();
         }
         else {
-            $(".triviaBanner").append(`${response.clues[spot].question}
-        <br>${response.clues[spot].answer}`);
+            var triviaValue = response.clues[spot].answer;
+            $(".triviaBanner").append(`${response.clues[spot].question}? <button class="triviaReveal" value=${response.clues[spot].answer}>Reveal Answer</button>`);
         }
+
+        $(".triviaReveal").on("click", function() {
+            $(".triviaReveal").text(triviaValue);
+        })
     })}
 setBanner();
 
@@ -134,6 +138,9 @@ $(".closeDev").on("click", function () {
 $(".burger").on("click", function () {
     $(".menu").attr(transform, scaleX(0));
 });
+$(".closeBanner").on("click",function(){
+    $(".triviaBanner").hide();
+})
 
 // Click Function for hiding/showing diet restrictions
 $('.fa-sliders-h').click(function () {
