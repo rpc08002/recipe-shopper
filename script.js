@@ -3,7 +3,7 @@ document.getElementById("displayJsDate").textContent = moment().format('dddd, MM
 // Trivia Banner
 function setBanner() {
 
-    let getTrivia = `http://jservice.io/api/category?id=49`;
+    let getTrivia = `https://jservice.io/api/category?id=49`;
 
     $.ajax({
 
