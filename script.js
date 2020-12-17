@@ -1,5 +1,30 @@
 document.getElementById("displayJsDate").textContent = moment().format('dddd, MMMM Do YYYY');
 
+// Trivia Banner
+function setBanner() {
+
+    let getTrivia = `http://jservice.io/api/category?id=49`;
+
+    $.ajax({
+
+        url: getTrivia,
+        method: "GET"
+
+    }).then(function(response) {
+        
+        let spot = Math.floor(Math.random() * 215) + 1;
+
+        // Loop to weed out empty entries
+        if(response.clues[spot].question === "" || response.clues[spot].answer === "") {
+            setBanner();
+        }
+        else {
+            $(".triviaBanner").append(`${response.clues[spot].question}
+        <br>${response.clues[spot].answer}`);
+        }
+    })}
+setBanner();
+
 //Search input
 var searchInput = "";
 var currentIds = [];
