@@ -3,7 +3,7 @@ document.getElementById("displayJsDate").textContent = moment().format('dddd, MM
 // Trivia Banner
 function setBanner() {
 
-    let getTrivia = `http://jservice.io/api/category?id=49`;
+    let getTrivia = `https://jservice.io/api/category?id=49`;
 
     $.ajax({
 
@@ -149,6 +149,12 @@ $(".closeBanner").on("click",function(){
     $(".triviaBanner").hide();
 })
 
+$(".clearBtn").on("click",function(event){
+    event.preventDefault();
+
+    $('input[type="search"]').val('');
+})
+
 // Click Function for hiding/showing diet restrictions
 $('.fa-sliders-h').click(function () {
     $('.filters').slideToggle(700); // Toggles the slide motion of the box
@@ -156,6 +162,8 @@ $('.fa-sliders-h').click(function () {
 
 //Click Handler When Search is Submitted
 $(".fa-search").on("click", function (event) {
+    
+    
     event.preventDefault();
 
     var searchInput = $(".searchRecipe").val();
